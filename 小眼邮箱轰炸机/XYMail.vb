@@ -13,6 +13,9 @@
         Mail.Subject = Txt_MailTitle.Text
         Mail.Body = Txt_MailBody.Text
         Mail.IsBodyHtml = False
+        'Dim MailFile As New System.Net.Mail.Attachment("附件文件")
+        'MailFile.Name = "附件文件名"
+        'Mail.Attachments.Add(MailFile)
         Smtp.Send(Mail)
         Mail.Dispose()
         MsgBox("Finished")
